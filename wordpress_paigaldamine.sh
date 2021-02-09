@@ -17,9 +17,9 @@ if [ $WP -eq 0 ]; then
 	mkdir -p /var/www/html/wordpress/wpcontent/uploads
 	chown -R www-data.www-data /var/www/html/wordpress/wpcontent/uploads
 	cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
-	sed -i "/s/database_name_here/wpdatabase/g/" /var/www/html/wordpress/wp-config.php
-	sed -i "/s/username_here/wpuser/g/" /var/www/html/wordpress/wp-config.php
-	sed -i "/s/password_here/wppass/g/" /var/www/html/wordpress/wp-config.php
+	sed -i "s/database_name_here/wpdatabase/g" /var/www/html/wordpress/wp-config.php
+	sed -i "s/username_here/wpuser/g" /var/www/html/wordpress/wp-config.php
+	sed -i "s/password_here/wppass/g" /var/www/html/wordpress/wp-config.php
 	echo "Wordpress on paigaldatud"
 elif [ $WP -eq 1 ]; then
 	echo "Wordpress on juba paigaldatud"
